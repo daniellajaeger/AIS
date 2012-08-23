@@ -5,8 +5,12 @@ gem 'rails', '3.2.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# To sqlite3 for heroku check out
+# http://stackoverflow.com/questions/10321189/teaching-myself-rails-deploying-first-app-to-heroku-failure-to-upload-sqlite3
+# But note that this won't work 'cause Ruby 1.9.3 won't allow pushing to heroku
+# http://stackoverflow.com/questions/10472728/heroku-dbpush-not-working-using-taps-gem
 
+gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.

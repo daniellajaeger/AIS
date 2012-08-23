@@ -1,11 +1,18 @@
-<table>
+<% @posts.reverse_each do |post| %>
+  <%= image_tag post.photo.url(:medium) %>
+  <%= post.title %>
+  <%= link_to 'Edit', edit_post_path(post) %>
+  <%= link_to 'Delete', post, confirm: 'Are you sure?', method: :delete %>
+<% end %>
+
+<!--<table>
 <% @posts.reverse_each do |post| %>
   <tr>
-    <td><%= post.title %></td>
     <td><%= image_tag post.photo.url(:medium) %></td>
+    <td><%= post.title %></td>
     <td><%= link_to 'Show', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
-</table>
+</table> -->
