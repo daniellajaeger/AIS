@@ -1,7 +1,7 @@
 <div id="photo_set">
   <% @posts.reverse_each do |post| %>
     <div id="photos">
-      <span class="title"><%= post.title %></span><br>
+      <span class="title"><a href="<%= post.url %>"><%= post.title %></span><br>
       <%= image_tag post.photo.url(:medium) %><br>
       <%= link_to 'Edit', edit_post_path(post) %>
       <%= link_to 'X', post, confirm: 'Are you sure?', method: :delete %><br>
