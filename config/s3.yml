@@ -1,0 +1,12 @@
+development:
+  bucket: adventuresinshipping
+  access_key_id: AKIAIY4CKFUEEX555J6Q
+  secret_access_key: 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
+test:
+  bucket: adventuresinshipping
+  access_key_id: AKIAIY4CKFUEEX555J6Q
+  secret_access_key: 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
+production:
+  bucket: adventuresinshipping
+  access_key_id: AKIAIY4CKFUEEX555J6Q
+  secret_access_key: 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
