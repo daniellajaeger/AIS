@@ -298,7 +298,7 @@ module Paperclip
             acl = @s3_permissions[style] || @s3_permissions[:default]
             acl = acl.call(self, style) if acl.respond_to?(:call)
             write_options = {
-              :content_type => file.content_type,
+              :content_type => file.content_type.to_s.strip, # DJ updated 9/30/12 https://github.com/NicoArbogast/paperclip/commit/66441fca083f188ebe1807dfaf5e1a5ce668a04a
               :acl => acl
             }
             write_options[:metadata] = @s3_metadata unless @s3_metadata.empty?
